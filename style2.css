@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(172, 112, 228);
+}
+.container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.container>div{
+    position: absolute;
+    width: 100px;
+    height: 350px;
+    border-radius: 8px;
+    border-bottom: 3px solid rgba(66, 62, 62, 0.664);
+    border-left: 3px solid rgba(224, 236, 248, 0.425);
+}
+.container>div:nth-child(1){
+    background-color: rgb(128, 102, 153);
+    animation: rotate5 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.container>div:nth-child(2){
+    background-color: rgb(111, 38, 247);
+    animation: rotate4 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.container>div:nth-child(3){
+    background-color: rgb(51, 214, 36);
+    animation: rotate3 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.container>div:nth-child(4){
+    background-color: rgb(191, 231, 13);
+    animation: rotate2 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.container>div:nth-child(5){
+    background-color: rgb(226, 110, 43);
+    animation: rotate1 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.container>div:nth-child(6){
+    background-color: rgb(226, 43, 43);
+    animation: rotate 5s forwards infinite;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+.nail{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 11;
+}
+@keyframes rotate {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(55deg);
+    }
+    80% {
+      transform: rotate(55deg);
+    }
+  }
+@keyframes rotate1 {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(35deg);
+    }
+    80% {
+      transform: rotate(35deg);
+    }
+  }
+@keyframes rotate2 {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(15deg);
+    }
+  }
+@keyframes rotate3 {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+  }
+@keyframes rotate4 {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-35deg);
+    }
+    80% {
+      transform: rotate(-35deg);
+    }
+  }
+@keyframes rotate5 {
+    30% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-55deg);
+    }
+    80% {
+      transform: rotate(-55deg);
+    }
+  }

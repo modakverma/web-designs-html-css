@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: transparent;
+    border: 4px solid rgb(28, 190, 28);
+    color: rgb(28, 190, 28);
+    font-size: 40px;
+    width: 30%;
+    height: 150px;
+    border-radius: 90px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span,svg{
+    position: absolute;
+}
+svg{
+    scale: 3;
+    fill: transparent;
+ }
+button:focus{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: 0.3s;
+    animation: spin 2s 500ms forwards;
+}
+button:focus span{
+    color: transparent;
+}
+button:focus svg{
+    animation: tick 500ms 2300ms forwards;
+}
+
+
+@keyframes spin{
+    20%{
+        border: 8px dashed rgb(255, 255, 255);
+        scale:1.2;
+    }
+    80%{
+        border: 8px dashed rgb(255, 255, 255);
+    }
+    100%{
+        transform: rotate(1080deg);
+        border: 4px solid;
+        background-color:rgb(28, 190, 28) ;
+    }
+}
+
+@keyframes tick{
+    to{
+       fill: white;
+    }
+}
